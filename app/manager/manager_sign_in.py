@@ -71,19 +71,19 @@ def manager_screen():
 
 
     # ============ Label ============
-    waiter_name_label = Label(manager, text="پیشخدمت", font=("Commons", 15), bg=color_1)
+    waiter_name_label = Label(manager, text="Waiter", font=("Commons", 15), bg=color_1)
     waiter_name_label.grid(row = 0, column = 2)
 
-    waiter_age_label = Label(manager, text="سن", font=("Commons", 15), bg=color_1)
+    waiter_age_label = Label(manager, text="Age", font=("Commons", 15), bg=color_1)
     waiter_age_label.grid(row = 1, column = 2)
 
-    waiter_income_label = Label(manager, text="درآمد", font=("Commons", 15), bg=color_1)
+    waiter_income_label = Label(manager, text="Income", font=("Commons", 15), bg=color_1)
     waiter_income_label.grid(row = 2, column = 2)
 
-    item_name_label = Label(manager, text="نام کالا", font=("Commons", 15), bg=color_1)
+    item_name_label = Label(manager, text="item Name", font=("Commons", 15), bg=color_1)
     item_name_label.grid(row = 0, column = 3)
 
-    item_price_label = Label(manager, text="قیمت کالا", font=("Commons", 15), bg=color_1)
+    item_price_label = Label(manager, text="Item Price", font=("Commons", 15), bg=color_1)
     item_price_label.grid(row = 1, column = 3)
 
     # ============ Entry ============
@@ -115,7 +115,7 @@ def manager_screen():
     # item_price.pack(pady=2)
     # ============ List Box ============
     # show waiters
-    waiter_list = Listbox(manager, font=('Commons', 15), width=26,
+    waiter_list = Listbox(manager, font=('Commons', 15), width=24,
                           height=15, bg=color_2, foreground=color_1, highlightbackground=color_2)
     waiter_list.grid(row = 0, column = 0, rowspan = 8)
 
@@ -178,8 +178,8 @@ def manager_screen():
         fill_waiter_list(waiter)
         waiter_list_view()
 
-    add_waiter_list = Button(manager,  text="اضافه کردن", font=("Commons", 14), width=11,
-                             height=2, background=color_2, foreground=color_1,
+    add_waiter_list = Button(manager,  text="Add", font=("Commons", 14), width=11,
+                             height=1, background=color_2, foreground=color_1,
                              highlightbackground=color, command=add_to_waiter_list)
     add_waiter_list.grid(row= 3, column = 1)
 
@@ -189,8 +189,8 @@ def manager_screen():
                                          waiter_age.get(), waiter_income.get())
         waiter_list_view()
 
-    update_waiters_list = Button(manager,  text="آپدیت", font=("Commons", 14), width=11,
-                                 height=2, background=color_2, foreground=color_1,
+    update_waiters_list = Button(manager,  text="Update", font=("Commons", 14), width=11,
+                                 height=1, background=color_2, foreground=color_1,
                                  highlightbackground=color, command=update_to_waiter_list)
 
     update_waiters_list.grid(row= 4, column = 1)
@@ -201,8 +201,8 @@ def manager_screen():
         app.manager.data.delete(selected_waiter[0])
         waiter_list_view()
 
-    delete_waiters_list = Button(manager,  text="حذف", font=("Commons", 14), width=11,
-                                 height=2, background=color_2, foreground=color_1,
+    delete_waiters_list = Button(manager,  text="Delete", font=("Commons", 14), width=11,
+                                 height=1, background=color_2, foreground=color_1,
                                  highlightbackground=color, command=delete_to_waiter_list)
     delete_waiters_list.grid(row= 5, column = 1)
 
@@ -210,8 +210,8 @@ def manager_screen():
         app.manager.data.update_pay_money(selected_waiter[3] == 0, selected_waiter[0], waiter_age.get(), waiter_name.get())
         waiter_list_view()
 
-    pay_waiters_list = Button(manager,  text="پرداخت درآمد", font=("Commons", 14), width=11,
-                              height=2, background=color_2, foreground=color_1,
+    pay_waiters_list = Button(manager,  text="Pay Income", font=("Commons", 14), width=11,
+                              height=1, background=color_2, foreground=color_1,
                               highlightbackground=color, command=update_pay_money)
     pay_waiters_list.grid(row= 6, column = 1)
 
@@ -223,8 +223,8 @@ def manager_screen():
         item_list_view()
 
     # for refresh lists
-    refresh_key = Button(manager,  text="تازه سازی", font=("Commons", 14), width=11,
-                         height=2, background=color_2, foreground=color_1,
+    refresh_key = Button(manager,  text="Refresh", font=("Commons", 14), width=11,
+                         height=1, background=color_2, foreground=color_1,
                          highlightbackground=color, command=refresh_lists)
     refresh_key.grid(row= 6, column = 4)
 
@@ -237,8 +237,8 @@ def manager_screen():
         fill_item_list(item)
         item_list_view()
 
-    add_item_list = Button(manager,  text="اضافه کردن کالا", font=("Commons", 14), width=11,
-                           height=2, background=color_2, foreground=color_1,
+    add_item_list = Button(manager,  text="Add Item", font=("Commons", 14), width=11,
+                           height=1, background=color_2, foreground=color_1,
                            highlightbackground=color, command=add_to_item_list)
     add_item_list.grid(row= 2, column = 4)
 
@@ -248,8 +248,8 @@ def manager_screen():
         app.manager.data_1.update(selected_item[0], item_name.get(), item_price.get())
         item_list_view()
 
-    update_item_list = Button(manager,  text="آپدیت کالا", font=("Commons", 14), width=11,
-                              height=2, background=color_2, foreground=color_1,
+    update_item_list = Button(manager,  text="Update Item", font=("Commons", 14), width=11,
+                              height=1, background=color_2, foreground=color_1,
                               highlightbackground=color, command=update_to_item_list)
     update_item_list.grid(row= 3, column = 4)
 
@@ -259,8 +259,8 @@ def manager_screen():
         app.manager.data_1.delete(selected_item[0])
         item_list_view()
 
-    delete_item_list = Button(manager,  text="حذف کالا", font=("Commons", 14), width=11,
-                    height=2, background=color_2, foreground=color_1,
+    delete_item_list = Button(manager,  text="Delete Item", font=("Commons", 14), width=11,
+                    height=1, background=color_2, foreground=color_1,
                               highlightbackground=color, command=delete_to_item_list)
     delete_item_list.grid(row= 4, column = 4)
 
@@ -272,12 +272,12 @@ def manager_screen():
         fill_item_list(items)
 
 
-    search_item_list = Button(manager,  text="جستجو", font=("Commons", 14), width=11,
-                    height=2, background=color_2, foreground=color_1,
+    search_item_list = Button(manager,  text="Search", font=("Commons", 14), width=11,
+                    height=1, background=color_2, foreground=color_1,
                               highlightbackground=color, command=search_to_item_list)
     search_item_list.grid(row= 5, column = 4)
 
-    b_back = Button(manager,  text="بازگشت", font=("Commons", 14), width=11, height=2,
+    b_back = Button(manager,  text="Back", font=("Commons", 14), width=11, height=1,
                     background=color_2, foreground=color_1,
                     highlightbackground=color, command=back_to_main_manager)
     b_back.place(x=0, y=450)

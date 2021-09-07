@@ -41,7 +41,7 @@ def main_screen():
     # ============= time ============
     d = date.today()
 
-    day_label = Label(root, text=d, font=("b koodak", 14), background=color_1, foreground=color,
+    day_label = Label(root, text=d, font=("Commons", 14), background=color_1, foreground=color,
                       width=18, height=2)
     day_label.pack(side=TOP, pady=100)
 
@@ -50,30 +50,30 @@ def main_screen():
     # day_label.place(x=200, y=120)
 
     # ============= Button =============
-    b_user = Button(root, text="ورود کاربر", font=("b koodak", 12), width=16, height=2,
+    b_user = Button(root, text="User Login", font=("b koodak", 12), width=16, height=2,
                     background=color, foreground=color_1,
                     highlightbackground=color, command=user_sign)
     b_user.place(x=467, y=200)
 
-    b_manager = Button(root, text="ورود مدیر", font=("b koodak", 12), width=16
+    b_manager = Button(root, text="Manager Login", font=("b koodak", 12), width=16
                        , height=2, background=color, foreground=color_1, highlightbackground=color,
                        command=manager_sign)
     b_manager.place(x=467, y=300)
 
-    b_quit = Button(root, text="خروج", font=("b koodak", 12), width=16
+    b_quit = Button(root, text="Exit", font=("b koodak", 12), width=16
                     , height=2, background=color, foreground=color_1, highlightbackground=color,
                     command=root.destroy)
     b_quit.place(x=467, y=400)
 
     # ============= Labels =============
-    welcome = Label(root, text="به منوی اپ خوش آمدید", font=("b koodak", 16),
+    welcome = Label(root, text="Welcome To App", font=("b koodak", 16),
                     bg=color_1, foreground=color)
     welcome.place(x=467, y=10)
 
     created = Frame(root, width=6, height=2, bg='black')
     created.place(x=0,y=475)
 
-    developer = Label(created, text="Created by Mobin Bagheri ", font=("b koodak", 9),
+    developer = Label(created, text="Created by Mobin Bagheri ", font=("b koodak", 9, "bold"),
                     bg=color_1, foreground=color)
     developer.pack(side=TOP)
 
