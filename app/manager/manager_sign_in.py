@@ -280,7 +280,7 @@ def manager_screen():
     b_back = Button(manager,  text="Back", font=("Commons", 14), width=11, height=1,
                     background=color_2, foreground=color_1,
                     highlightbackground=color, command=back_to_main_manager)
-    b_back.place(x=0, y=450)
+    b_back.place(x=0, y=460)
 
     # =============================
 

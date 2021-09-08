@@ -80,7 +80,7 @@ def mngr_screen():
 
     log_in = Button(mngr, text="Back", font=("Commons", 14), width=11, height=1, bg=color_2, foreground=color_1,
                       highlightbackground=color_2, command=back_to_main_mngr)
-    log_in.place(x=0, y=442)
+    log_in.place(x=0, y=460)
 
 
     mngr.mainloop()

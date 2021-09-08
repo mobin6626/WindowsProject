@@ -173,7 +173,7 @@ def user_screen():
     # ======== Button ========
     b_back = Button(user, text="Back", font=("Commons", 14), width=11, height=1, bg=color_2, foreground=color_1,
                     highlightbackground=color_2, command=back_to_main_user)
-    b_back.place(x=0, y=442)
+    b_back.place(x=0, y=460)
 
     def choose():
         clear_item_list_memory()
