@@ -2,7 +2,7 @@ import sqlite3
 
 
 def connect():
-    conn = sqlite3.connect("../../database.db")
+    conn = sqlite3.connect("../database.db")
     cur = conn.cursor()
     cur.execute(
        "CREATE TABLE IF NOT EXISTS items (id INTEGER PRIMARY KEY , name text , price text )"
@@ -21,7 +21,7 @@ def insert(name, price):
     conn.close()
 
 def view():
-    conn = sqlite3.connect("../../database.db")
+    conn = sqlite3.connect("../database.db")
     cur = conn.cursor()
     cur.execute(
         "SELECT * FROM items"
