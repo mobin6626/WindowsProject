@@ -12,7 +12,7 @@ def connect():
 
 
 def insert(name, price):
-    conn = sqlite3.connect("../../database.db")
+    conn = sqlite3.connect("../database.db")
     cur = conn.cursor()
     cur.execute(
         "INSERT INTO items VALUES (NULL ,?,?)", (name, price)
@@ -31,7 +31,7 @@ def view():
     return rows
 
 def search(name="", price=""):
-    conn = sqlite3.connect("../../database.db")
+    conn = sqlite3.connect("../database.db")
     cur = conn.cursor()
     cur.execute(
         "SELECT * FROM items WHERE name = ? OR price = ?", (name, price)
@@ -41,14 +41,14 @@ def search(name="", price=""):
     return rows
 
 def delete(id):
-    conn = sqlite3.connect("../../database.db")
+    conn = sqlite3.connect("../database.db")
     cur = conn.cursor()
     cur.execute("DELETE FROM items WHERE id=?", (id,))
     conn.commit()
     conn.close()
 
 def update(id, name, price):
-    conn = sqlite3.connect("../../database.db")
+    conn = sqlite3.connect("../database.db")
     cur = conn.cursor()
     cur.execute(
         "UPDATE items SET name = ?, price = ? WHERE id = ?", (name, price, id)
